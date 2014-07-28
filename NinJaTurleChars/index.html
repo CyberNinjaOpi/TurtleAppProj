@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<center>
+    <html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title></title>
+        <link href="Content/font-awesome.css" rel="stylesheet" />
+        <link href="Content/bootstrap.css" rel="stylesheet" />
+        <link href="Content/myCss.css" rel="stylesheet" />
+    </head>
+    <body>
+        <input type="text" id="name" placeholder="Name" />
+        <input type="text" id="weapon" placeholder="Weapon" />
+        <input type="text" id="picture" placeholder="Character URL" />
+        <input type="text" id="type" placeholder="Type" />
+        <div class="btn btn-default" onclick="TurtleApp.addCharacter()"><i class="fa fa-2x fa-flask"></i></div>
+<!--table loading...--><div class="well" id="character-table"><h2><i class="fa fa-spin fa-cog"></i> Loading...</h2></div>
+        <!--Modal Start-->
+        <div class="modal fade" id="modal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <h4 class="modal-title">
+                            Editing information for
+                            <span id="modalTitle"></span>
+                        </h4>
+                    </div>
+                    <div class="modal-body">
+                        <ul class="fa-ul">
+                            <li>
+                                <i class="fa fa-li fa-user"></i>
+                                <input class="input-sm" type="text" id="editName" />
+                            </li>
+                            <li>
+                                <i class="fa-li fa fa-fire"> </i>
+                                <input class="input-sm" type="text" id="editWeapon" />
+                            </li>
+                            <li>
+                                <i class="fa-li fa fa-file-image-o"></i>
+                                <input class="input-sm" type="text" id="editPicture" />
+                            </li>
+                            <li>
+                                <i class="fa-li fa fa-pencil-square-o"></i>
+                                <input class="input-sm" type="text" id="editType" />
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="modal-footer">
+                        <button id="deleteButton" class="btn btn-danger" style="float:left;">
+                            <i class="fa fa-trash-o"></i>
+                        </button>
+                        <!--<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>-->
+                        <button type="button" id="saveChanges" class="btn btn-default">Save changes</button>
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+        <!--Modal End-->
+        <script src="Scripts/jquery-1.9.0.js"></script>
+        <script src="Scripts/bootstrap.js"></script>
+        <script src="_NinjasScript.js"></script>
+    </body>
+</html>
+</center>
